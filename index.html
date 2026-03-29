@@ -72,7 +72,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <nav class="nav-links">
 
-<a href="#home">Početna</a>
+<a href="#home">Početno</a>
 <a href="#about">O meni</a>
 <a href="#services">Usluge</a>
 <a href="#portfolio">Radovi</a>
@@ -434,17 +434,25 @@ Otvoren sam za nove projekte i suradnje.
 </div>
 
 
-<form class="contact-form">
+<form class="contact-form" name="kontakt" method="POST" data-netlify="true" action="/hvala.html" netlify-honeypot="bot-field">
 
-<input type="text" placeholder="Ime">
+  <!-- Netlify hidden -->
+  <input type="hidden" name="form-name" value="kontakt">
 
-<input type="email" placeholder="Email">
+  <!-- Anti spam -->
+  <p style="display:none">
+    <label>Ne ispunjavaj: <input name="bot-field"></label>
+  </p>
 
-<textarea placeholder="Poruka"></textarea>
+  <input type="text" name="ime" placeholder="Ime" required>
 
-<button type="submit">
-Pošalji
-</button>
+  <input type="email" name="email" placeholder="Email" required>
+
+  <textarea name="poruka" placeholder="Poruka" required></textarea>
+
+  <button type="submit">
+    Pošalji
+  </button>
 
 </form>
 
