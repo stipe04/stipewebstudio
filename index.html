@@ -72,7 +72,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <nav class="nav-links">
 
-<a href="#home">Početno</a>
+<a href="#home">Početna</a>
 <a href="#about">O meni</a>
 <a href="#services">Usluge</a>
 <a href="#portfolio">Radovi</a>
@@ -436,6 +436,11 @@ Otvoren sam za nove projekte i suradnje.
 
 <form class="contact-form" name="kontakt" method="POST" data-netlify="true" action="/hvala.html" netlify-honeypot="bot-field">
 
+  <input type="hidden" name="source">
+<input type="hidden" name="utm_source">
+<input type="hidden" name="utm_medium">
+<input type="hidden" name="utm_campaign">
+
   <!-- Netlify hidden -->
   <input type="hidden" name="form-name" value="kontakt">
 
@@ -451,7 +456,7 @@ Otvoren sam za nove projekte i suradnje.
   <textarea name="poruka" placeholder="Poruka" required></textarea>
 
   <button type="submit">
-    Pošalji
+    Pošalji upit
   </button>
 
 </form>
@@ -486,6 +491,6 @@ Otvoren sam za nove projekte i suradnje.
 <i class="fab fa-whatsapp"></i>
 </a>
 
-
+<script src="script.js"></script>
 </body>
 </html>

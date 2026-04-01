@@ -70,5 +70,37 @@ nav.classList.remove("show");
 
 });
 
+const params = new URLSearchParams(window.location.search);
+
+function setField(name, value) {
+  const field = document.querySelector(`input[name="${name}"]`);
+  if(field && value) field.value = value;
+}
+
+// UTM parametri
+setField("utm_source", params.get("utm_source"));
+setField("utm_medium", params.get("utm_medium"));
+setField("utm_campaign", params.get("utm_campaign"));
+
+// SOURCE logika
+let source = "direct";
+
+if(params.get("utm_source")){
+  source = params.get("utm_source");
+}
+else if(document.referrer.includes("google")){
+  source = "google-organic";
+}
+else if(document.referrer.includes("facebook")){
+  source = "facebook";
+}
+else if(document.referrer.includes("instagram")){
+  source = "instagram";
+}
+else if(document.referrer.includes("wa.me")){
+  source = "whatsapp";
+}
+
+setField("source", source);
 
 
