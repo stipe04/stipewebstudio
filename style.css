@@ -597,3 +597,50 @@ box-shadow:0 0 20px rgba(37,211,102,0.6);
     align-items: center;
   }
 }
+
+/* ======================
+   CTA SEKCIJA
+====================== */
+
+.cta-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0f172a; /* tamna pozadina (ili tvoja) */
+  color: #fff;
+}
+
+.cta-features {
+  margin-bottom: 30px;
+}
+
+.cta-features p {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.cta-main {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta-sub {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* GUMB */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cta-main {
+    font-size: 24px;
+  }
+}
