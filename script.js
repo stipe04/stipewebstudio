@@ -106,6 +106,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// Postavlja trenutnu godinu u element s id-em "year"
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 
 
 
