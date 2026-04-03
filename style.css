@@ -644,3 +644,99 @@ box-shadow:0 0 20px rgba(37,211,102,0.6);
     font-size: 24px;
   }
 }
+
+/* KARTICE */
+
+.pricing {
+  padding: 80px 20px;
+  text-align: center;
+  background:radial-gradient(circle, rgba(0,200,255,0.2), transparent 70%);
+}
+
+.pricing .title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.pricing .subtitle {
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 36px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.card ul li {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* POPULARNI PAKET */
+.popular {
+  border: 2px solid #007bff;
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popular {
+    transform: scale(1);
+  }
+}
