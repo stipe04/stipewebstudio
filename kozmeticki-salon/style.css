@@ -1,0 +1,459 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+max-width: 100%;
+}
+
+body{
+font-family:Arial;
+overflow-x:hidden;
+}
+
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 40px;
+z-index:1000;
+}
+
+.logo{
+height:50px;
+transition:0.4s;
+}
+
+.nav-center a{
+margin:0 10px;
+font-size:22px;
+color:black;
+}
+
+.nav-right a{
+margin-left:20px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background-image:url("images/hero.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:36px;
+color:white;
+}
+
+.hero-text p{
+font-size:20px;
+margin-top:10px;
+color:white;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:gold;
+text-decoration:none;
+color:black;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#d4af37;
+transform:scale(1.05);
+}
+
+/* USLUGE */
+
+.services{
+padding:80px 10%;
+text-align:center;
+}
+
+.services-grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+}
+
+.service img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.service p{
+margin-top:10px;
+font-weight:bold;
+}
+
+/* GALERIJA */
+
+.gallery{
+padding:80px 10%;
+text-align:center;
+}
+
+.gallery-grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+cursor:pointer;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.lightbox img{
+max-width:80%;
+max-height:80%;
+}
+
+/* REVIEWS */
+
+.reviews{
+padding:80px 10%;
+text-align:center;
+background:#f8f8f8;
+}
+
+.reviews-container{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.review{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* LOCATION */
+
+.location{
+padding:80px 10%;
+}
+
+.location-container{
+display:flex;
+gap:40px;
+}
+
+.location-left{
+flex:1;
+}
+
+.location-right{
+flex:1;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+color:white;
+}
+
+.footer-container{
+display:flex;
+justify-content:space-between;
+padding:40px 10%;
+}
+
+.footer-bottom{
+text-align:center;
+padding:15px;
+border-top:1px solid #444;
+}
+
+/* STICKY BUTTONS */
+
+.phone-sticky{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#007bff;
+color:white;
+font-size:22px;
+padding:15px;
+border-radius:50%;
+z-index:999;
+}
+
+.whatsapp-sticky{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+font-size:24px;
+padding:15px;
+border-radius:50%;
+z-index:999;
+}
+
+/* ANIMACIJA */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+font-size:26px;
+cursor:pointer;
+}
+
+/* MOBITEL */
+
+@media(max-width:768px){
+
+.nav-right{
+display:none;
+position:absolute;
+top:70px;
+right:0;
+background:white;
+flex-direction:column;
+width:200px;
+}
+
+.nav-right a{
+padding:15px;
+border-bottom:1px solid #eee;
+}
+
+.hamburger{
+display:block;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.reviews-container{
+grid-template-columns:1fr;
+}
+
+.location-container{
+flex-direction:column;
+}
+
+.footer-container{
+flex-direction:column;
+text-align:center;
+gap:20px;
+}
+
+}
+
+.hero-box {
+  background: rgba(212, 175, 55, 0.25); /* zlatna prozirna */
+  backdrop-filter: blur(3px); /* blur pozadine */
+  -webkit-backdrop-filter: blur(10px); /* za Safari */
+
+  border: 2px solid rgba(212, 175, 55, 0.6);
+  border-radius: 15px;
+
+  padding: 40px;
+  max-width: 600px;
+}
+
+/* da tekst bolje izgleda */
+.hero-box h1,
+.hero-box p {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* LANDING SEKCIJA */
+
+.landing-content {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* svaka sekcija */
+
+.landing-content .section {
+  margin-bottom: 60px;
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fdf6e3, #f5e6a3);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  border: 1px solid rgba(212,175,55,0.4);
+}
+
+/* hover efekt (profi feel) */
+.landing-content .section:hover {
+  transform: translateY(-5px);
+}
+
+/* naslovi */
+
+.landing-content h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.landing-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+/* BENEFITI */
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits li {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+
+/* OFFER (glavni CTA blok) */
+
+.offer {
+  background: linear-gradient(135deg, #d4af37, #f5e6a3);
+  color: black;
+}
+
+.offer h2 {
+  margin-bottom: 15px;
+}
+
+.offer .btn {
+  margin: 10px;
+}
+
+
+/* TRUST */
+
+.trust {
+  background: #f8f8f8;
+}
+
+
+/* GUMBI */
+
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #d4af37;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #c19b2e;
+}
+
+/* outline gumb */
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #d4af37;
+}
+
+.btn-outline:hover {
+  background: #d4af37;
+  color: black;
+}
+
+
+/* MOBITEL */
+
+@media(max-width:768px){
+
+.landing-content {
+  padding: 50px 15px;
+}
+
+.landing-content h2 {
+  font-size: 22px;
+}
+
+}
+
+.example-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 300px;
+  flex: 1 1 250px;
+}
+
+.example-card img {
+  width: 100%;
+  display: block;
+}
+
+.example-text {
+  padding: 15px;
+}
